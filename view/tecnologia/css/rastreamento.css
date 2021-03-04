@@ -1,0 +1,53 @@
+.form-control { 
+    border-radius: 3px; 
+	font-size: 14px;
+}
+
+.centering-v {
+	transform: translateY(40%);
+}
+
+.img-logo-rastreamento
+{
+	display: block;
+	max-width: 100%;
+	vertical-align: middle;
+	margin-left: 7%;
+    width: 10%;	
+}
+
+.colunaDocumento {
+	background-color: #FFFFFF;
+	padding-left: 10px;
+	border: 0;
+	width: 10%;
+}
+
+@media screen and (max-width: 768px) {
+
+
+	#conteudoRastreio{
+		background-color: #FFFFFF;
+		color: #111111;
+		padding-top: 8%;
+		padding-bottom: 0%;
+		padding-left: 15px;
+		padding-right: 15px;
+		min-height: 100%;
+		height: 90%;
+		top: 150px;
+		position: relative;
+	}
+	
+	
+	.img-logo-rastreamento
+	{
+		margin-left: 27%;		
+		width: 30%;
+	}
+}
+	
+		
+
+
+
