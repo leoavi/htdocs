@@ -104,7 +104,7 @@ else {
             <!--toggle button start-->
             <button id="showLeftPush"><i class="fa fa-bars"></i></button>
             <!--toggle button end-->
-            <div class="topBar">Programação de carga e descarga</div>
+            <div class="topBar">Programação de contêiner</div>
             <div class="topBarRight">
                 <button data-toggle="modal" class="botaoTop" onClick="multiselection();" data-target="#FiltroModal"><i
                             class="glyphicon glyphicon-search"></i></button>
@@ -132,23 +132,6 @@ else {
                             <th class="text-center">Número</th>
                             <th class="text-center">Pedido</th>
                             <th>Transportadora</th>
-                            <th class="text-center">Coleta</th>
-                            <th class="text-center">Entrega</th>
-                            <th class="text-center">Prog entrega</th>
-                            <th>Tipo</th>
-                            <th>Filial</th>
-                            <th>Cliente Final</th>
-                            <th>Local de entrega</th>
-                            <th>Municipio/UF Entrega</th>
-                            <th class="text-center">Volume</th>
-                            <th class="text-center">Embalagem</th>
-                            <th class="text-center">Peso Bruto</th>
-                            <th>Tipo de veículo</th>
-                            <th>Veículo</th>
-                            <th>Acoplado</th>
-                            <th>CNTR</th>
-                            <th>Motorista</th>
-                            <th>Observação</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -159,20 +142,23 @@ else {
             </div>
 
             <div class="footerFixed">
-                <div class="col-xs-1">
-                    <button type="button" class="span">&nbsp;</button>
-                </div>
-                <div class="col-xs-11">
-                    <div class="right">
-                        <button type="button" class="botao display" id="OcorrenciaProgramacaoCargaDescarga"
-                                onClick="OcorrenciaProgramacaoCargaDescargaFun()">Ocorrência
-                        </button>
-                        &nbsp;
-                        <button type="button" class="botao display" id="verObsProgramacaoCargaDescarga"
-                                onClick="verObsProgramacaoCargaDescargaFun()">Observação
-                        </button>
-                    </div>
-                </div>
+            <div class="left">
+                            <div class="col-xs-1">
+                            <button type="button" class="span">&nbsp;</button>
+                            </div>
+                            <div class="col-xs-11">
+                            <div class="right">
+                            <a href="InserirPessoa.php">
+                            	<button name="adicionarPessoa" class="botao" type="button" id="adicionarPessoa">Inserir</button>
+                            </a>
+                            <button name="visualizarPessoa" class="botao display" type="button" id="visualizarPessoa">Visualizar</button>
+                            <button type="button" class="botao display" id="cancelarPessoa" data-toggle="modal"  data-target="#CancelarPessoaModal"  name="cancelarPessoa">Cancelar</button>
+                            <button type="button" class="botao display" id="excluirPessoa"  name="excluirPessoa" data-toggle="modal"  data-target="#ExcluirPessoaModal">Excluir</button>
+                            <button type="button" class="botao display" id="liberarPessoa" data-toggle="modal"  data-target="#LiberarPessoaModal" name="liberarPessoa">Liberar</button>
+                            <button type="button" class="botao display" id="voltarPessoa" data-toggle="modal"  data-target="#VoltarPessoaModal" name="voltarPessoa">Voltar</button>
+                            </div>
+                            </div>
+                        </div>
             </div><!-- end footer -->
         </form>
     </div><!-- end pageContent -->

@@ -166,6 +166,8 @@ else {
                     </div>
 
                     <div class="footerFixed">
+                    
+
                         <div class="col-xs-1">
                             <button type="button" class="span">&nbsp;</button>
                         </div>

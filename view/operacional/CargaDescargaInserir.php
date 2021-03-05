@@ -72,7 +72,7 @@ include_once('../../controller/tecnologia/Sistema.php');
       
 			<div id="toggle">
             	<!--toggle button start-->
-				<a href="Pessoa.php"><button id="showLeftPushVoltarForm"><i class="glyphicon glyphicon-menu-left"></i></button></a>
+				<a href="CargaDescarga.php"><button id="showLeftPushVoltarForm"><i class="glyphicon glyphicon-menu-left"></i></button></a>
                 <button hidden="true" id="showLeftPush" class="display"><i class="glyphicon glyphicon-menu-left"></i></button>
 				<!--toggle button end-->
             </div>  
