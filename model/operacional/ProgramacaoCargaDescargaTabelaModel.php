@@ -266,21 +266,6 @@ try {
                         <td class=\"text-right\">$programacaoNumero</td>
                         <td class=\"text-right\">$programacaoNumeroPedido</td>
                         <td>$programacaoTransportadora</td>
-                        <td class=\"text-center\"><span style=\"display:none\">$programacaoColetaOrdenacao</span>$programacaoColeta</td>
-                        <td class=\"text-center\"><span style=\"display:none\">$programacaoEntregaOrdenacao</span>$programacaoEntrega</td>
-                        <td class=\"text-center\"><span style=\"display:none\">$programacaoProgramacaoEntregaOrdenacao</span>$programacaoProgramacaoEntrega</td>
-                        <td>$programacaoTipo</td>
-                        <td>$programacaoFilial</td>
-                        <td>$programacaoClienteFinal</td>
-                        <td>$programacaoLocalEntrega</td>
-                        <td>$programacaoMunicipioLocalEntrega - $programacaoEstadoLocalEntrega</td>
-                        <td class=\"text-right\">$programacaoVolume</td>
-                        <td class=\"text-right\">$programacaoEmbalagem</td>
-                        <td class=\"text-right\">$programacaoPesoBruto</td>
-                        <td>$programacaoTipoVeiculo</td>
-                        <td>$programacaoVeiculo</td>
-                        <td>$programacaoAcoplado</td>
-                        <td>$programacaoConteiner</td>
                     </tr>";
         } while ($rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC));
     } else {
