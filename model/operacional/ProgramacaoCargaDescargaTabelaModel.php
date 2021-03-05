@@ -281,8 +281,6 @@ try {
                         <td>$programacaoVeiculo</td>
                         <td>$programacaoAcoplado</td>
                         <td>$programacaoConteiner</td>
-                        <td>$programacaoMotorista</td>
-                        <td>$programacaoOBS</td>
                     </tr>";
         } while ($rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC));
     } else {
