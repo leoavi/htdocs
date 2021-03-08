@@ -21,17 +21,13 @@ if (!empty($pessoaUsuarioFiltro)) {
 $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,  
                                                A.STATUS STATUS, 
                                                A.NUMERO NUMERO,
-                                               A.TIPOPROCESSO TIPOPROCESSO,
-                                               C.APELIDO TRANSPORTADORA, 
                                                A.DATA DATA, 
                                                D.NOME STATUSNOME,
                                                B.APELIDO CLIENTE,
-                                               A.NUMEROPEDIDO NUMEROPEDIDO,
-                                               D.RESOURCENAME RESOURCENAME
+                                               A.NUMEROPEDIDO NUMEROPEDIDO
 
                                                 FROM OP_PROGRAMACAO A (NOLOCK) 
                                                INNER JOIN MS_PESSOA B (NOLOCK) ON B.HANDLE = A.CLIENTE 
-                                                LEFT JOIN MS_PESSOA C (NOLOCK) ON C.HANDLE = A.TRANSPORTADORA
                                                 LEFT JOIN MS_STATUS D (NOLOCK) ON D.HANDLE = A.STATUS 
                                                
                                              
