@@ -9,11 +9,7 @@ if (!empty($pessoaUsuarioFiltro)) {
                                                 FROM OP_PROGRAMACAO X
                                                WHERE X.CLIENTE IN ($pessoaUsuarioFiltro)
 
-                                               UNION ALL
-
-                                              SELECT X.HANDLE
-                                                FROM OP_PROGRAMACAO X
-                                               WHERE X.TRANSPORTADORA IN ($pessoaUsuarioFiltro)) ";
+                                            ";
 } else {
     $filtroPessoaUsuario = "";
 }
