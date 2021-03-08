@@ -20,7 +20,8 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
                                                A.DATA DATA, 
                                                D.NOME STATUSNOME,
                                                B.APELIDO CLIENTE,
-                                               A.NUMEROPEDIDO NUMEROPEDIDO
+                                               A.NUMEROPEDIDO NUMEROPEDIDO.
+                                               A.OBSERVACAO OBSERVACAO
 
                                                 FROM OP_PROGRAMACAO A (NOLOCK) 
                                                INNER JOIN MS_PESSOA B (NOLOCK) ON B.HANDLE = A.CLIENTE 
@@ -46,37 +47,37 @@ try {
             $programacaoHandle = $rowProgramacao['HANDLE'];
             $programacaoStatus = $rowProgramacao['STATUS'];
             
-            $programacaoStatusIcone = Sistema::getImagem($rowProgramacao['RESOURCENAME'], $rowProgramacao['STATUSNOME']);
+       //     $programacaoStatusIcone = Sistema::getImagem($rowProgramacao['RESOURCENAME'], $rowProgramacao['STATUSNOME']);
             $programacaoNumero = $rowProgramacao['NUMERO'];
             $programacaoNumeroPedido = $rowProgramacao['NUMEROPEDIDO'];
             $programacaoColeta = Sistema::formataDataHora($rowProgramacao['DATA']);
-            $programacaoEntrega = Sistema::formataDataHora($rowProgramacao['PREVISAOENTREGA']);
-            $programacaoProgramacaoEntrega = Sistema::formataDataHora($rowProgramacao['COLETAPROGRAMADO']);
-            $programacaoTipo = $rowProgramacao['TIPO'];
-            $programacaoFilial = $rowProgramacao['FILIAL'];
-            $programacaoClienteFinal = $rowProgramacao['CLIENTEFINAL'];
-            $programacaoLocalEntrega = $rowProgramacao['LOCALENTREGA'];
-            $programacaoMunicipioLocalEntrega = $rowProgramacao['MUNICIPIOLOCALENTREGA'];
-            $programacaoEstadoLocalEntrega = $rowProgramacao['ESTADOLOCALENTREGA'];
-            $programacaoVolume = $rowProgramacao['QUANTIDADEEXPEDICAO'];
-            $programacaoEmbalagem = $rowProgramacao['QUANTIDADEEMBALAGEM'];
-            $programacaoPesoBruto = Sistema::formataValor($rowProgramacao['PESOBRUTO']);
-            $programacaoTipoVeiculo = $rowProgramacao['TIPOVEICULO'];
-            $programacaoVeiculo = $rowProgramacao['VEICULO'];
-            $programacaoAcoplado = $rowProgramacao['ACOPLADO'];
-            $programacaoConteiner = $rowProgramacao['CONTEINER'];
-            $programacaoMotorista = $rowProgramacao['MOTORISTA'];
+         //   $programacaoEntrega = Sistema::formataDataHora($rowProgramacao['PREVISAOENTREGA']);
+       //     $programacaoProgramacaoEntrega = Sistema::formataDataHora($rowProgramacao['COLETAPROGRAMADO']);
+       //     $programacaoTipo = $rowProgramacao['TIPO'];
+         //   $programacaoFilial = $rowProgramacao['FILIAL'];
+      //      $programacaoClienteFinal = $rowProgramacao['CLIENTEFINAL'];
+        //    $programacaoLocalEntrega = $rowProgramacao['LOCALENTREGA'];
+          //  $programacaoMunicipioLocalEntrega = $rowProgramacao['MUNICIPIOLOCALENTREGA'];
+           // $programacaoEstadoLocalEntrega = $rowProgramacao['ESTADOLOCALENTREGA'];
+           // $programacaoVolume = $rowProgramacao['QUANTIDADEEXPEDICAO'];
+            //$programacaoEmbalagem = $rowProgramacao['QUANTIDADEEMBALAGEM'];
+            //$programacaoPesoBruto = Sistema::formataValor($rowProgramacao['PESOBRUTO']);
+            //$programacaoTipoVeiculo = $rowProgramacao['TIPOVEICULO'];
+            //$programacaoVeiculo = $rowProgramacao['VEICULO'];
+            //$programacaoAcoplado = $rowProgramacao['ACOPLADO'];
+            //$programacaoConteiner = $rowProgramacao['CONTEINER'];
+            //$programacaoMotorista = $rowProgramacao['MOTORISTA'];
             $programacaoOBS = Sistema::formataTexto($rowProgramacao['OBSERVACAO']);
 
             $programacaoColetaOrdenacao = strtotime($rowProgramacao['DATA']);
-            $programacaoEntregaOrdenacao = strtotime($rowProgramacao['PREVISAOENTREGA']);
-            $programacaoProgramacaoEntregaOrdenacao = strtotime($rowProgramacao['COLETAPROGRAMADO']);
+            //$programacaoEntregaOrdenacao = strtotime($rowProgramacao['PREVISAOENTREGA']);
+            //$programacaoProgramacaoEntregaOrdenacao = strtotime($rowProgramacao['COLETAPROGRAMADO']);
             echo "  <tr>
                         <td class='handle' hidden='true'>$programacaoHandle</td>
                         <td>$programacaoStatusIcone</td>
                         <td class=\"text-right\">$programacaoNumero</td>
                         <td class=\"text-right\">$programacaoNumeroPedido</td>
-                        <td>$programacaoTransportadora</td>
+                    
                     </tr>";
         } while ($rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC));
     } else {
