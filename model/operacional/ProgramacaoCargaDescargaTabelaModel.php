@@ -20,7 +20,7 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
                                                A.DATA DATA, 
                                                D.NOME STATUSNOME,
                                                B.APELIDO CLIENTE,
-                                               A.NUMEROPEDIDO NUMEROPEDIDO.
+                                               A.NUMEROPEDIDO NUMEROPEDIDO,
                                                A.OBSERVACAO OBSERVACAO
 
                                                 FROM OP_PROGRAMACAO A (NOLOCK) 
