@@ -25,7 +25,7 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
 
                                                 FROM OP_PROGRAMACAO A (NOLOCK) 
                                                INNER JOIN MS_PESSOA B (NOLOCK) ON B.HANDLE = A.CLIENTE 
-                                                LEFT JOIN MS_STATUS D (NOLOCK) ON D.HANDLE = A.STATUS 
+                                                LEFT JOIN OP_PROGRAMACAOSTATUS D (NOLOCK) ON D.HANDLE = A.STATUS 
                                                
                                              
                                               WHERE A.EMPRESA = $empresa
@@ -74,7 +74,7 @@ try {
             //$programacaoProgramacaoEntregaOrdenacao = strtotime($rowProgramacao['COLETAPROGRAMADO']);
             echo "  <tr>
                         <td class='handle' hidden='true'>$programacaoHandle</td>
-                        <td>$programacaoStatusIcone</td>
+                        
                         <td class=\"text-right\">$programacaoNumero</td>
                         <td class=\"text-right\">$programacaoNumeroPedido</td>
                     
