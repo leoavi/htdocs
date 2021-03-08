@@ -27,7 +27,7 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
                                                D.NOME STATUSNOME,
                                                B.APELIDO CLIENTE,
                                                A.NUMEROPEDIDO NUMEROPEDIDO,
-                                               D.RESOURCENAME RESOURCENAME,
+                                               D.RESOURCENAME RESOURCENAME
 
                                                 FROM OP_PROGRAMACAO A (NOLOCK) 
                                                INNER JOIN MS_PESSOA B (NOLOCK) ON B.HANDLE = A.CLIENTE 
