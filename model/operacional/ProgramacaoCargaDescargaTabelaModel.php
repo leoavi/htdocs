@@ -53,7 +53,6 @@ try {
             $programacaoStatusIcone = Sistema::getImagem($rowProgramacao['RESOURCENAME'], $rowProgramacao['STATUSNOME']);
             $programacaoNumero = $rowProgramacao['NUMERO'];
             $programacaoNumeroPedido = $rowProgramacao['NUMEROPEDIDO'];
-            $programacaoTransportadora = $rowProgramacao['TRANSPORTADORA'];
             $programacaoColeta = Sistema::formataDataHora($rowProgramacao['DATA']);
             $programacaoEntrega = Sistema::formataDataHora($rowProgramacao['PREVISAOENTREGA']);
             $programacaoProgramacaoEntrega = Sistema::formataDataHora($rowProgramacao['COLETAPROGRAMADO']);
