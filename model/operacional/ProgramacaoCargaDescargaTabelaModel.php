@@ -7,7 +7,7 @@ $pessoaUsuarioFiltro = Sistema::getPessoaUsuarioToStr($connect);
 if (!empty($pessoaUsuarioFiltro)) {
     $filtroPessoaUsuario = " AND A.HANDLE IN (SELECT X.HANDLE
                                                 FROM OP_PROGRAMACAO X
-                                               WHERE X.CLIENTE IN ($pessoaUsuarioFiltro)
+                                               WHERE X.CLIENTE IN ($pessoaUsuarioFiltro))
 
                                             ";
 } else {
