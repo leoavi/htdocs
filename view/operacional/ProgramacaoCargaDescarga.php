@@ -130,7 +130,7 @@ else {
                           
                             <th class="text-center">Número</th>
                             <th class="text-center">Pedido</th>
-                            <th>Transportadora</th>
+                            
                         </tr>
                         </thead>
                         <tbody>
