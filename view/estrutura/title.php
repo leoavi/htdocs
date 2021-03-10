@@ -1,11 +1,11 @@
 <?php
 if (!empty($_SESSION['complementoTitulo'])) {
 ?>
-    <title>Escalasoft - <?=$_SESSION['complementoTitulo']?></title>
+    <title>Ar Terminais - <?=$_SESSION['complementoTitulo']?></title>
 <?php
 } else {
 ?>
-    <title>Escalasoft</title>
+    <title>Ar Terminais</title>
 <?php
 }
 
