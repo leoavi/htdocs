@@ -35,7 +35,7 @@
             <div>
 
                 <div class="main-page login-page  FlexContainer">
-                    <img src="../tecnologia/img/logologin.png" class="logologin" alt="Escalasoft tecnologia">
+                    <img src="../tecnologia/img/logologin.png" class="logologin" alt="Ar Terminais">
                     <br>
                     <div class="login-body FlexItem">
 
