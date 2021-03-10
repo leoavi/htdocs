@@ -77,9 +77,9 @@ try {
             echo "  <tr>
                         <td class='handle' hidden='true'>$programacaoHandle</td>
                         <td class=\"text-right\">$programacaoNumero</td>
+                        <td class=\"text-right\">$programacaoQuantidade</td>
                         <td class=\"text-right\">$programacaoColetaOrdenacao</td>
                         <td class=\"text-right\">$programacaoNumeroPedido</td>
-                        <td class=\"text-right\">$programacaoQuantidade</td>
                         <td class=\"text-right\">$programacaoOBS</td>
                     
                     </tr>";
