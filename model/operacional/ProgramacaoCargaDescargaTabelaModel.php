@@ -51,7 +51,7 @@ try {
        //     $programacaoStatusIcone = Sistema::getImagem($rowProgramacao['RESOURCENAME'], $rowProgramacao['STATUSNOME']);
             $programacaoNumero = $rowProgramacao['NUMERO'];
             $programacaoNumeroPedido = $rowProgramacao['NUMEROPEDIDO'];
-            $programacaoColeta = Sistema::formataDataHora($rowProgramacao['DATA']);
+            $programacaoColeta = date('d/m/Y H:i', strtotime($rowProgramacao['DATA']));//Sistema::formataDataHora($rowProgramacao['DATA']);
          //   $programacaoEntrega = Sistema::formataDataHora($rowProgramacao['PREVISAOENTREGA']);
        //     $programacaoProgramacaoEntrega = Sistema::formataDataHora($rowProgramacao['COLETAPROGRAMADO']);
        //     $programacaoTipo = $rowProgramacao['TIPO'];
