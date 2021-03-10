@@ -18,6 +18,7 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
                                                A.STATUS STATUS, 
                                                A.NUMERO NUMERO,
                                                A.DATA DATA, 
+                                               A.QUANTIDADE QUANTIDADE,
                                                D.NOME STATUSNOME,
                                                B.APELIDO CLIENTE,
                                                A.NUMEROPEDIDO NUMEROPEDIDO,
@@ -64,6 +65,7 @@ try {
             //$programacaoPesoBruto = Sistema::formataValor($rowProgramacao['PESOBRUTO']);
             //$programacaoTipoVeiculo = $rowProgramacao['TIPOVEICULO'];
             //$programacaoVeiculo = $rowProgramacao['VEICULO'];
+            $programacaoQuantidade = $rowProgramacao['QUANTIDADE'];
             //$programacaoAcoplado = $rowProgramacao['ACOPLADO'];
             //$programacaoConteiner = $rowProgramacao['CONTEINER'];
             //$programacaoMotorista = $rowProgramacao['MOTORISTA'];
@@ -74,9 +76,11 @@ try {
             //$programacaoProgramacaoEntregaOrdenacao = strtotime($rowProgramacao['COLETAPROGRAMADO']);
             echo "  <tr>
                         <td class='handle' hidden='true'>$programacaoHandle</td>
-                        
                         <td class=\"text-right\">$programacaoNumero</td>
+                        <td class=\"text-right\">$programacaoColetaOrdenacao</td>
                         <td class=\"text-right\">$programacaoNumeroPedido</td>
+                        <td class=\"text-right\">$programacaoQuantidade</td>
+                        <td class=\"text-right\">$programacaoOBS</td>
                     
                     </tr>";
         } while ($rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC));

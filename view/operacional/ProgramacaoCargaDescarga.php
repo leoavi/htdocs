@@ -127,9 +127,11 @@ else {
                     <table class="table table-striped table-bordered " id="reqtablenew" border="0">
                         <thead>
                         <tr class="Noactivetr">
-                          
                             <th class="text-center">Número</th>
+                            <th class="text-center">Quantidade</th>
+                            <th class="text-center">Data</th>
                             <th class="text-center">Pedido</th>
+                            <th>Observação</th>
                             
                         </tr>
                         </thead>
