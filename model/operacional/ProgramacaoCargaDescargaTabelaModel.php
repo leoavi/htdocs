@@ -34,7 +34,7 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
                                                 " . $filtroPessoaUsuario . "
                                                 " . Sistema::getFiltroPostEntreDataMinuto('dataInicio', 'dataFinal', 'A.DATA') . "
                                                 " . Sistema::getFiltroPostTexto("pedido", "A.NUMEROPEDIDO") . " 
-                                                UPDATE MS_BLOCONOTA
+                                                UPDATE `MS_BLOCONOTA`
 SET STATUS = 1 WHERE HANDLE = 4
                                                 ";
 
