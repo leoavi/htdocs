@@ -51,7 +51,6 @@ try {
             $programacaoHandle = $rowProgramacao['HANDLE'];
             $programacaoStatus = $rowProgramacao['STATUS'];
 
-            $programacaodataInclusao = $rowProgramacao['DATAINCLUSAO']
             
        //     $programacaoStatusIcone = Sistema::getImagem($rowProgramacao['RESOURCENAME'], $rowProgramacao['STATUSNOME']);
             $programacaoNumero = $rowProgramacao['NUMERO'];
