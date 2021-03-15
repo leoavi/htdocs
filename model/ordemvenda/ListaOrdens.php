@@ -69,16 +69,6 @@ if(count($where) > 0){
 
 $order = "ORDER BY A." . $columns[$col]["data"] . " " . $dir;
 
-
-
-$sqlOrdens = "UPDATE MS_BLOCONOTA
-SET DATAINCLUSAO = GETDATE() WHERE HANDLE = 4";
-
-
-
-$queryOrdens = $connect->prepare($sqlOrdens);
-$queryOrdens->execute();
-
 $sqlOrdens = "WITH ORDENS AS
 (
 SELECT ROW_NUMBER() OVER ($order) ROW_NUMBER,
@@ -103,6 +93,9 @@ INNER JOIN VE_TIPOORDEM F ON A.TIPO = F.HANDLE
 $whereTexto
 )   
 SELECT * FROM ORDENS A WHERE row_number BETWEEN $start AND $length
+
+UPDATE MS_BLOCONOTA
+SET DATAINCLUSAO = GETDATE() WHERE HANDLE = 4
 ";
 
 $queryOrdens = $connect->prepare($sqlOrdens);
