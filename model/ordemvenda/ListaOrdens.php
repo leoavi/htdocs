@@ -69,7 +69,7 @@ if(count($where) > 0){
 
 $order = "ORDER BY A." . $columns[$col]["data"] . " " . $dir;
 
-$sqlOrdens = "WITH ORDENS AS
+/*$sqlOrdens = "WITH ORDENS AS
 (
 SELECT ROW_NUMBER() OVER ($order) ROW_NUMBER,
 A.HANDLE,
@@ -93,7 +93,10 @@ INNER JOIN VE_TIPOORDEM F ON A.TIPO = F.HANDLE
 $whereTexto
 )   
 SELECT * FROM ORDENS A WHERE row_number BETWEEN $start AND $length
-";
+";*/
+
+$sqlOrdens = "UPDATE MS_BLOCONOTA
+SET ASSUNTO = 'ASDASD' WHERE HANDLE = 4";
 
 $queryOrdens = $connect->prepare($sqlOrdens);
 $queryOrdens->execute();

@@ -7,7 +7,6 @@
 <meta http-equiv="refresh" content="0; url=view/estrutura/login.php" />
 <body>
 
-<h1>Teste</h1>
 <!--
 <script src="view/tecnologia/js/jquery.js"></script>
 <script type="text/javascript">
