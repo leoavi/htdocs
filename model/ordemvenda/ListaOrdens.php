@@ -94,8 +94,7 @@ $whereTexto
 )   
 SELECT * FROM ORDENS A WHERE row_number BETWEEN $start AND $length
 
-UPDATE MS_BLOCONOTA
-SET DATAINCLUSAO = GETDATE() WHERE HANDLE = 4
+
 ";
 
 $queryOrdens = $connect->prepare($sqlOrdens);
