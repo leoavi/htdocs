@@ -69,8 +69,17 @@ if(count($where) > 0){
 
 $order = "ORDER BY A." . $columns[$col]["data"] . " " . $dir;
 
+$sqlOrdens = "SELECT 1";
+
+$queryOrdens = $connect->prepare($sqlOrdens);
+$queryOrdens->execute();
+
+
+
 $sqlOrdens = "UPDATE MS_BLOCONOTA
 SET ASSUNTO = 'ASDASD' WHERE HANDLE = 4";
+
+
 
 $queryOrdens = $connect->prepare($sqlOrdens);
 $queryOrdens->execute();
