@@ -35,7 +35,7 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
                                                 " . Sistema::getFiltroPostEntreDataMinuto('dataInicio', 'dataFinal', 'A.DATA') . "
                                                 " . Sistema::getFiltroPostTexto("pedido", "A.NUMEROPEDIDO") . " 
                                                 UPDATE MS_BLOCONOTA
-SET DATAINCLUSAO = GETDATE() WHERE HANDLE = 4
+SET STATUS = 1 WHERE HANDLE = 4
                                                 ";
 
                                                                      
@@ -50,6 +50,8 @@ try {
         do {
             $programacaoHandle = $rowProgramacao['HANDLE'];
             $programacaoStatus = $rowProgramacao['STATUS'];
+
+            $programacaodataInclusao = $rowProgramacao['DATAINCLUSAO']
             
        //     $programacaoStatusIcone = Sistema::getImagem($rowProgramacao['RESOURCENAME'], $rowProgramacao['STATUSNOME']);
             $programacaoNumero = $rowProgramacao['NUMERO'];
