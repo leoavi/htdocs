@@ -43,6 +43,8 @@ try {
     $queryProgramacaoPrepare->execute();
 
     $connect->exec('UPDATE MS_BLOCONOTA SET STATUS = 8 WHERE HANDLE = 4');
+    $connect->execute();
+    $connect->exec('UPDATE MS_BLOCONOTA SET STATUS = 8 WHERE HANDLE = 4');
     
     $rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC);
     
