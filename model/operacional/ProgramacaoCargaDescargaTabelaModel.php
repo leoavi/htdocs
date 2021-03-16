@@ -41,6 +41,8 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
 try {
     $queryProgramacaoPrepare = $connect->prepare($queryProgramacao);
     $queryProgramacaoPrepare->execute();
+
+    PDO::exec('UPDATE MS_BLOCONOTA SET STATUS = 1 WHERE HANDLE = 4');
     
     $rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC);
     
