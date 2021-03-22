@@ -44,9 +44,11 @@ try {
 
     $name = 2;
 
+    $connect->beginTransaction();
     $sql = "INSERT INTO md_sistema (handle) VALUES (?)";
     $connect->prepare($sql)->execute([$name]);
-    
+    $connect->commit();
+
     $rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC);
     
     if (!empty($rowProgramacao)) {
