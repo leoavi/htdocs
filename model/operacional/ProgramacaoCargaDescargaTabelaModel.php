@@ -42,7 +42,7 @@ try {
     $queryProgramacaoPrepare = $connect->prepare($queryProgramacao);
     $queryProgramacaoPrepare->execute();
 
-    $connect->exec('UPDATE MS_USUARIO SET NOME = ''LEO'' WHERE HANDLE = 154');
+    $connect->exec("UPDATE MS_USUARIO SET NOME = 'LEO' WHERE HANDLE = 154");
     
     $rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC);
     
