@@ -9,7 +9,7 @@ class BancoDados {
     private static $senha = "#escala123";
     private static $mascaraDataHora = "Y-m-d H:i";
     private static $mascaraData = "Y-m-d";
-    private static $isolationLevel = PDO::SQLSRV_TXN_READ_COMMITED; 
+    private static $isolationLevel = PDO::SQLSRV_TXN_READ_UNCOMMITTED; 
     private static $TnsOracle = "
 							(DESCRIPTION =
     						(ADDRESS_LIST =
