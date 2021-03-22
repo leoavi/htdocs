@@ -4,11 +4,6 @@ Sistema::iniciaCarregando();
 
 $pessoaUsuarioFiltro = Sistema::getPessoaUsuarioToStr($connect);
 
-$name = 2;
-  
-$sql = "INSERT INTO md_sistema (handle) VALUES (?)";
-$connect->prepare($sql)->execute([$name]);
-$connect->commit();
 
 if (!empty($pessoaUsuarioFiltro)) {
     $filtroPessoaUsuario = " AND A.HANDLE IN (SELECT X.HANDLE
