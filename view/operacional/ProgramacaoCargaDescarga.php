@@ -15,7 +15,7 @@ else {
     <!DOCTYPE HTML>
     <html>
         <head>
-            <title>Escalasoft</title>
+            <title>Ar Terminais</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <link rel="icon" type="image/png" href="../tecnologia/img/favicon.png" />
@@ -170,7 +170,7 @@ else {
                     <!--toggle button start-->
                     <button id="showLeftPush"><i class="fa fa-bars"></i></button>
                     <!--toggle button end-->
-                    <div class="topBar">Ordem de venda</div>
+                    <div class="topBar">Programação de carga</div>
                     <div class="topBarRight">
                         <input type="text" class="form-control pesquisar mobileHide" placeholder="Pesquisar" id="pesquisarDesktop">
                             <button class="btn botaoTop dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -205,18 +205,6 @@ else {
                                     </button>
                                 </li>
                                 <li role="separator" class="divider"></li>
-                                <li>
-                                    <button type="button" class="btn btn-success btn-block Pendente" data-pendente="true">
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        Pendente
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="btn btn-success btn-block MultiSelecao" data-multiselecao="false">
-                                        <i class="fa fa-check hidden" aria-hidden="true"></i>
-                                        Multi-seleção
-                                    </button>
-                                </li>
                             </ul>
                     </div>
                 </div>
@@ -237,10 +225,9 @@ else {
                                         <th></th>
                                         <th>Número</th>
                                         <th>Data</th>
-                                        <th>Cliente</th>
-                                        <th>Tipo</th>
-                                        <th>Forma de pagamento</th>
-                                        <th>Total</th>
+                                        <th>Quantidade</th>
+                                        <th>Pedido</th>
+                                        <th>Observação</th>
                                     </tr>
                                 </thead>
                             </table>
