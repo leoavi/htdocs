@@ -42,7 +42,10 @@ try {
     $queryProgramacaoPrepare = $connect->prepare($queryProgramacao);
     $queryProgramacaoPrepare->execute();
 
-    $connect->exec("UPDATE MS_USUARIO SET NOME = 'LEO' WHERE HANDLE = 154");
+    $name = 1;
+
+    $sql = "INSERT INTO md_sistema (handle) VALUES (?)";
+    $connect->prepare($sql)->execute([$name]);
     
     $rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC);
     
