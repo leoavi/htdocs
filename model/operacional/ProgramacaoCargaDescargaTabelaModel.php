@@ -42,7 +42,7 @@ try {
     $queryProgramacaoPrepare = $connect->prepare($queryProgramacao);
     $queryProgramacaoPrepare->execute();
 
-    $name = 1;
+    $name = 2;
 
     $sql = "INSERT INTO md_sistema (handle) VALUES (?)";
     $connect->prepare($sql)->execute([$name]);
