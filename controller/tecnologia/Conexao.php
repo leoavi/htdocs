@@ -14,11 +14,11 @@ class Conexao extends BancoDados {
         if (!isset(self::$instancia)) {
             try {
                 self::$instancia = new PDO(BancoDados::getDns(), BancoDados::getUsuario(), BancoDados::getSenha());
-                self::$instancia->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                self::$instancia->setAttribute(PDO::ATTR_ORACLE_NULLS, PDO::NULL_EMPTY_STRING);
+               # self::$instancia->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+               # self::$instancia->setAttribute(PDO::ATTR_ORACLE_NULLS, PDO::NULL_EMPTY_STRING);
             } catch (Exception $ex) {
-                session_destroy();
-                session_start();
+ #               session_destroy();
+               # session_start();
 
                 echo "<script language='javascript' type='text/javascript'>window.location.href='../../view/estrutura/login.php?mensagem=Não foi possível conectar com o servidor.</br>{$ex->getMessage()}'</script>";
             }
