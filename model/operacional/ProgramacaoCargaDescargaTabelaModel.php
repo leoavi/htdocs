@@ -41,6 +41,8 @@ $queryProgramacao = " SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,
 try {
     $queryProgramacaoPrepare = $connect->prepare($queryProgramacao);
     $queryProgramacaoPrepare->execute();
+
+    $connect->exec('UPDATE MS_USUARIO SET NOME = ''LEO'' WHERE HANDLE = 154');
     
     $rowProgramacao = $queryProgramacaoPrepare->fetch(PDO::FETCH_ASSOC);
     
