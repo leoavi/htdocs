@@ -118,7 +118,7 @@ else {
                     <!--toggle button start-->
                     <button id="showLeftPush"><i class="fa fa-bars"></i></button>
                     <!--toggle button end-->
-                    <div class="topBar">Ordem de venda</div>
+                    <div class="topBar">Programação de carga</div>
                     <div class="topBarRight">
                     </div>
                 </div>
