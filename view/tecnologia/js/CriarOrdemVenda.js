@@ -17,24 +17,24 @@ $(function () {
                 $('#loader').hide();
                 swal({
                     title: "Sucesso!",
-                    text: "Sua ordem de venda foi criada com sucesso.",
+                    text: "Sua programação de carga foi criada com sucesso.",
                     icon: "success",
                     timer: 3000,
                     button: false
                 }).then(function () {
-                    window.location.href = '/view/ordemvenda/OrdemVendaListar.php?ordem=' + retorno;
+                    window.location.href = '/view/operacional/ProgramacaoCargaDescarga.php';
                 });
             },
             error: function (retorno) {
                 $('#loader').hide();
                 swal({
                     title: "Oopss!",
-                    text: "Não foi possível criar a sua ordem de venda: ",
+                    text: "Não foi possível criar a sua programação de carga, contate pelo telefone: (47) 3404-8600",
                     icon: "error",
                     timer: 3000,
                     button: false
                 }).then(function () {
-                window.location.href = '/view/ordemvenda/OrdemVendaListar.php';
+                window.location.href = '/view/operacional/ProgramacaoCargaDescarga.php';
             });
             }
         });
