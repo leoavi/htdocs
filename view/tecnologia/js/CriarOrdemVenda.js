@@ -34,7 +34,9 @@ $(function () {
                     icon: "error",
                     timer: 3000,
                     button: false
-                });
+                }).then(function () {
+                window.location.href = '/view/ordemvenda/OrdemVendaListar.php';
+            });
             }
         });
         return false;
