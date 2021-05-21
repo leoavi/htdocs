@@ -29,7 +29,7 @@ $(function () {
                 $('#loader').hide();
                 swal({
                     title: "Oopss!",
-                    text: "Não foi possível criar a sua ordem de venda: " + retorno.responseJSON.message,
+                    text: "Não foi possível criar a sua ordem de venda: ",
                     icon: "error",
                     timer: 3000,
                     button: false
