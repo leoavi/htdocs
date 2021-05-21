@@ -258,13 +258,8 @@ else {
             
             <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVendaListarFuncoes.js"></script>
             <script>
-            $('#FormOrdem').submit(function () {
-                // var data = $(this).serializeArray();
-
-                alert('data');
-            }
-            </script>
-            // <!-- <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVenda.js"></script> -->
+          
+            <!-- <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVenda.js"></script> -->
         </body>
     </html>
 
