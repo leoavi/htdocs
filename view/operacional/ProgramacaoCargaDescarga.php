@@ -261,7 +261,14 @@ else {
             <script>window.bugsnagClient = bugsnag('9f6cc1049582acdb30bc5fff5e922e62')</script>
 
             <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVendaListarFuncoes.js"></script>
-            <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVenda.js"></script>
+            <script>
+            $('#FormOrdem').submit(function () {
+                var data = $(this).serializeArray();
+
+                alert(data);
+            }
+            </script>
+            <!-- <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVenda.js"></script> -->
         </body>
     </html>
 

@@ -194,10 +194,6 @@ else {
             <!-- SweetAlert -->
             <script type="text/javascript" src="../tecnologia/js/sweetalert/sweetalert.min.js"></script>
 
-            <!-- Bugsnag -->
-            <script src="//d2wy8f7a9ursnm.cloudfront.net/v6/bugsnag.min.js"></script>
-            <script>window.bugsnagClient = bugsnag('9f6cc1049582acdb30bc5fff5e922e62')</script>
-
             <script type="text/javascript" src="../tecnologia/js/CriarOrdemVenda.js"></script>
         </body>
     </html>
