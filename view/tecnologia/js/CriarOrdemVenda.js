@@ -26,14 +26,7 @@ $(function () {
                 });
             },
             error: function (retorno) {
-                bugsnagClient.notify(new Error(retorno.responseJSON.message), {
-                    beforeSend: function (report) {
-                        report.updateMetaData('Dados enviados', {
-                            "DADOS": data
-                        })
-                    }
-                });
-
+                
                 $('#loader').hide();
                 swal({
                     title: "Oopss!",
