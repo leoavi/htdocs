@@ -256,19 +256,15 @@ else {
             <!-- jQuery Mask -->
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
             
-            <!-- Bugsnag -->
-            <script src="//d2wy8f7a9ursnm.cloudfront.net/v6/bugsnag.min.js"></script>
-            <script>window.bugsnagClient = bugsnag('9f6cc1049582acdb30bc5fff5e922e62')</script>
-
             <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVendaListarFuncoes.js"></script>
             <script>
             $('#FormOrdem').submit(function () {
-                var data = $(this).serializeArray();
+                // var data = $(this).serializeArray();
 
-                alert(data);
+                alert('data');
             }
             </script>
-            <!-- <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVenda.js"></script> -->
+            // <!-- <script type="text/javascript" src="../tecnologia/js/ordemvenda/OrdemVenda.js"></script> -->
         </body>
     </html>
 
