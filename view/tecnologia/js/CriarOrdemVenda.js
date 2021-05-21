@@ -4,6 +4,8 @@ $(function () {
     $('#FormOrdem').submit(function () {
         var data = $(this).serializeArray();
 
+        alert(data);
+
         $('#loader').removeAttr('style');
 
         $.ajax({
