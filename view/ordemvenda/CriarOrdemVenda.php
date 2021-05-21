@@ -145,22 +145,6 @@ else {
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <span>Tipo<span class="vermelho">*</span></span>
-                                    <select class="form-control" id="TIPO" name="TIPO" required="required">
-                                        <option selected disabled value="">Selecione...</option>
-                                        <?php foreach($tipos as $tipo){ ?>
-                                            <option value="<?=$tipo["HANDLE"]?>"
-                                            data-tabelapadrao="<?=$tipo["TABELAPADRAO"]?>"
-                                            data-permitirsemtabela="<?=$tipo["PERMITESEMTABELA"]?>"
-                                            data-condicaopagamento="<?=$tipo["CONDICAOPAGAMENTO"]?>"
-                                            data-formapagamento="<?=$tipo["FORMAPAGAMENTO"]?>"
-                                            data-contatesouraria="<?=$tipo["CONTATESOURARIA"]?>"><?=$tipo["NOME"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <span>Data</span>
@@ -169,95 +153,11 @@ else {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <span>Prioridade<span class="vermelho">*</span></span>
-                                    <select class="form-control" id="PRIORIDADE" name="PRIORIDADE" required="required">
-                                        <option selected disabled value="">Selecione...</option>
-                                        <?php foreach($prioridades as $prioridade){ ?>
-                                            <option value="<?=$prioridade["HANDLE"]?>"><?=$prioridade["NOME"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="form-group">
                                     <span>Cliente<span class="vermelho">*</span></span>
                                     <select class="form-control" id="CLIENTE" name="CLIENTE" required="required">
                                         <option selected disabled value="">Selecione...</option>
                                         <?php foreach($clientes as $cliente){ ?>
                                             <option value="<?=$cliente["HANDLE"]?>"><?=$cliente["NOME"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <span>Tabela de Preço<span class="vermelho">*</span></span>
-                                    <select class="form-control" id="TABELAPRECO" name="TABELAPRECO" required="required">
-                                        <option selected disabled value="">Selecione...</option>
-                                        <?php foreach($tabelas as $tabela){ ?>
-                                            <option value="<?=$tabela["HANDLE"]?>"><?=$tabela["HANDLE"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <span>Forma de Pagamento<span class="vermelho">*</span></span>
-                                    <select class="form-control" id="FORMAPAGAMENTO" name="FORMAPAGAMENTO">
-                                        <option selected value="">Selecione...</option>
-                                        <?php foreach($formasPagamento as $formaPagamento){ ?>
-                                            <option value="<?=$formaPagamento["HANDLE"]?>"><?=$formaPagamento["NOME"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <span>Condição de Pagamento<span class="vermelho">*</span></span>
-                                    <select class="form-control" id="CONDICAOPAGAMENTO" name="CONDICAOPAGAMENTO">
-                                        <option selected value="">Selecione...</option>
-                                        <?php foreach($condicoesPagamento as $condicaoPagamento){ ?>
-                                            <option value="<?=$condicaoPagamento["HANDLE"]?>"><?=$condicaoPagamento["NOME"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <span>Valor</span>
-                                    <input type="text" class="form-control dinheiro" disabled="disabled" name="VALORORDEM" id="VALORORDEM" value="0,00">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <span>Tipo de frete<span class="vermelho">*</span></span>
-                                    <select class="form-control" id="TIPOFRETE" name="TIPOFRETE" required="required">
-                                        <option selected value="">Selecione...</option>
-                                        <?php foreach($tiposFrete as $tipoFrete){ ?>
-                                            <option value="<?=$tipoFrete["HANDLE"]?>"><?=$tipoFrete["NOME"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <span>Tipo de transporte</span>
-                                    <select class="form-control" id="TIPOTRANSPORTE" name="TIPOTRANSPORTE">
-                                        <option selected value="">Selecione...</option>
-                                        <?php foreach($tiposTransporte as $tipoTransporte){ ?>
-                                            <option value="<?=$tipoTransporte["HANDLE"]?>"><?=$tipoTransporte["NOME"]?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <span>Transportadora</span>
-                                    <select class="form-control" id="TRANSPORTADORA" name="TRANSPORTADORA">
-                                        <option selected value="">Selecione...</option>
-                                        <?php foreach($transportadoras as $transportadora){ ?>
-                                            <option value="<?=$transportadora["HANDLE"]?>"><?=$transportadora["NOME"]?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
