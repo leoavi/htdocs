@@ -53,9 +53,9 @@ class Sistema {
                 throw new Exception('Não foi possível conectar com o banco de dados.');
             }
 
-            if ($transacao) {
-                $conexao->beginTransaction();
-            }
+            // if ($transacao) {
+            //     $conexao->beginTransaction();
+            // }
 
             return $conexao;
         } catch (Exception $erro) {

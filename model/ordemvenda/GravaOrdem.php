@@ -17,6 +17,8 @@ $query = $connect->prepare($query);
 $retorno = $query->execute();
 
 
+
+
 echo Sistema::retornoJson(500, $retorno)
 
 // if (isset($dados["CHAVE"])) {
