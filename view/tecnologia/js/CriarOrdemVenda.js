@@ -27,6 +27,7 @@ $(function () {
                 });
             },
             error: function (retorno) {
+                console.log('oi erro', retorno);
                 $('#loader').hide();
                 swal({
                     title: "Oopss!",
