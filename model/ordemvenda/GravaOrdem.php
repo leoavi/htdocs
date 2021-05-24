@@ -12,7 +12,9 @@ $data = Sistema::getPost('DATA');
 $cliente = Sistema::getPost('CLIENTE');
 $observacao = Sistema::getPost('OBSERVACAO');
 
-echo $filial
+$query = "UPDATE MS_USUARIO SET OBSERVACAO = 1 WHERE HANDLE = 154"
+$query = $connect->prepare($query);						 
+$query->execute();
 
 if (isset($dados["CHAVE"])) {
     echo $dados["CHAVE"];
