@@ -12,12 +12,15 @@ $data = Sistema::getPost('DATA');
 $cliente = Sistema::getPost('CLIENTE');
 $observacao = Sistema::getPost('OBSERVACAO');
 
-$query = "UPDATE MS_USUARIO SET OBSERVACAO = 1 WHERE HANDLE = 154"
+$query = "UPDATE MS_USUARIO SET OBSERVACAO = $observacao WHERE HANDLE = 154"
 $query = $connect->prepare($query);						 
-$query->execute();
+$retorno = $query->execute();
 
-if (isset($dados["CHAVE"])) {
-    echo $dados["CHAVE"];
-} else {
-    echo Sistema::retornoJson(500, $body);
-}
+
+echo Sistema::retornoJson(500, $retorno)
+
+// if (isset($dados["CHAVE"])) {
+//     echo $dados["CHAVE"];
+// } else {
+//     echo Sistema::retornoJson(500, $body);
+// }
