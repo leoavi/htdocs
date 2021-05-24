@@ -14,6 +14,7 @@ $(function () {
             dataType: 'JSON',
             data: data,
             success: function (retorno) {
+                console.log('oi', retorno);
                 $('#loader').hide();
                 swal({
                     title: "Sucesso!",
