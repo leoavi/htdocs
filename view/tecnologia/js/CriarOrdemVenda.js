@@ -36,7 +36,7 @@ $(function () {
                     timer: 3000,
                     button: false
                 }).then(function () {
-                window.location.href = '/view/operacional/ProgramacaoCargaDescarga.php';
+                //window.location.href = '/view/operacional/ProgramacaoCargaDescarga.php';
             });
             }
         });
