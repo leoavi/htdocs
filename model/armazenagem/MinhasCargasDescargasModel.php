@@ -39,7 +39,7 @@ class minhasCargasDescargasModel {
     }
     
     public function getQuery($filtro = '') {
-        return "SELECT A.HANDLE HANDLE,
+        return "SELECT TOP 200 A.HANDLE HANDLE,
                        A.STATUS,
                        A.NUMERO NUMEROCARREGAMENTO,
 		               B.NOME TIPO,
@@ -277,7 +277,7 @@ class minhasCargasDescargasModel {
     }
     
     protected function getQueryFiltroCliente() {
-        return "SELECT TOP 1000 
+        return "SELECT TOP 200 
                        A.HANDLE, 
                        A.APELIDO C1, 
                        A.CNPJCPF C2, 
@@ -290,7 +290,7 @@ class minhasCargasDescargasModel {
 	}
 
     protected function getQueryFiltroTransportadora() {
-        return "SELECT TOP 1000 
+        return "SELECT TOP 200 
                        A.HANDLE, 
                        A.APELIDO C1, 
                        A.CNPJCPF C2, 
