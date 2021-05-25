@@ -16,9 +16,11 @@ $connect->exec("UPDATE MS_USUARIO SET OBSERVACAO = $observacao WHERE HANDLE = 15
 $connect->commit();
 
 
+$retorno = 'vsf';
+
+echo Sistema::retornoJson(500, $retorno);
 
 
-echo Sistema::retornoJson(500, $retorno)
 
 // if (isset($dados["CHAVE"])) {
 //     echo $dados["CHAVE"];
