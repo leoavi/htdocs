@@ -65,7 +65,7 @@ $wherePessoasUsuario = substr($wherePessoasUsuario, 0, -1);
 $wherePessoasUsuario .= ") )";
 
 if (@$PessoasUsuario > NULL) {
-    $queryProgramacao = "SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,  
+    $queryProgramacao = "SELECT DISTINCT TOP 200 A.HANDLE HANDLE,  
 						   A.STATUS STATUS, 
 						   A.NUMERO NUMERO,
                            A.TIPOPROCESSO TIPOPROCESSO,
@@ -127,7 +127,7 @@ if (@$PessoasUsuario > NULL) {
                            " . $whereData . " 
                            " . $filtroTransportadora . " ";
 } else {
-    $queryProgramacao = "SELECT DISTINCT TOP 1000 A.HANDLE HANDLE,  
+    $queryProgramacao = "SELECT DISTINCT TOP 200 A.HANDLE HANDLE,  
 						   A.STATUS STATUS, 
 						   A.NUMERO NUMERO,
                                                    A.TIPOPROCESSO TIPOPROCESSO,
