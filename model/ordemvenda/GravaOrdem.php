@@ -13,7 +13,7 @@ $cliente = Sistema::getPost('CLIENTE');
 $observacao = Sistema::getPost('OBSERVACAO');
 
 // $connect->beginTransaction()
-$retorno = $connect->exec("UPDATE MS_USUARIO SET OBSERVACAO = $observacao WHERE HANDLE = 154");
+$retorno = $connect->exec("UPDATE MS_USUARIO SET OBSERVACAO = '". $observacao ."' WHERE HANDLE = 154");
 // $connect->commit();
 
 echo Sistema::retornoJson(500, $retorno);
