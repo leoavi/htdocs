@@ -15,7 +15,7 @@ $observacao = Sistema::getPost('OBSERVACAO');
 $observacao = 'roi';
 
 // $connect->beginTransaction()
-$connect->exec("UPDATE MS_USUARIO SET OBSERVACAO = $observacao WHERE HANDLE = 154");
+$connect->exec("UPDATE MS_USUARIO SET OBSERVACAO = 'oi' WHERE HANDLE = 154");
 // $connect->commit();
 
 
