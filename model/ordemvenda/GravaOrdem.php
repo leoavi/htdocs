@@ -4,7 +4,7 @@ include_once('../../controller/tecnologia/WS.php');
 
 date_default_timezone_set('America/Sao_Paulo');
 
-$connect = Sistema::getConexao();
+$connect = Sistema::getConexao(false);
 
 $filial = Sistema::getPost('FILIAL');
 $tipo = Sistema::getPost('TIPO');
