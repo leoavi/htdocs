@@ -13,7 +13,7 @@ $cliente = Sistema::getPost('CLIENTE');
 $observacao = Sistema::getPost('OBSERVACAO');
 
 $connect->exec("UPDATE MS_USUARIO SET OBSERVACAO = $observacao WHERE HANDLE = 154");
-$connect->commit();
+// $connect->commit();
 
 
 $retorno = 'vsf';
