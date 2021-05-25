@@ -33,7 +33,7 @@ $(function () {
                     title: "Oopss!",
                     text: "Não foi possível criar a sua programação de carga, contate pelo telefone: (47) 3404-8600",
                     icon: "error",
-                    timer: 3000,
+                    timer: 5000,
                     button: false
                 }).then(function () {
                 //window.location.href = '/view/operacional/ProgramacaoCargaDescarga.php';

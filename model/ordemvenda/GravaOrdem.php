@@ -12,9 +12,8 @@ $data = Sistema::getPost('DATA');
 $cliente = Sistema::getPost('CLIENTE');
 $observacao = Sistema::getPost('OBSERVACAO');
 
-$query = "UPDATE MS_USUARIO SET OBSERVACAO = $observacao WHERE HANDLE = 154"
-$query = $connect->prepare($query);						 
-$retorno = $query->execute();
+$connect->exec("UPDATE MS_USUARIO SET OBSERVACAO = $observacao WHERE HANDLE = 154");
+$connect->commit();
 
 
 
