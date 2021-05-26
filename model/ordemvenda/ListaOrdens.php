@@ -10,13 +10,21 @@ $start = $_GET["start"];
 $length = $_GET["length"] + $start;
 $search = $_GET["pesquisa"];
 $cliente = $_GET["cliente"];
-$tipo = $_GET["tipo"];
-$formapagamento = $_GET["formapagamento"];
 
 $order = $_GET["order"];
 $columns = $_GET["columns"];
 $col = 0;
 $dir = "desc";
+
+$sqlPessoas = 
+"
+SELECT PESSOA FROM MS_USUARIOPESSOA WHERE USUARIO = '". $usuario ."'
+";
+
+$sqlPessoas = $connect->exec($sqlPessoas);
+
+$pessoas = $sqlPessoas->fetch(PDO::FETCH_ASSOC);
+$pessoas["PESSOA"] = Sistema::formataValor($pessoas["PESSOA"]);
 
 if (!empty($order)) {
     foreach ($order as $o) {
@@ -28,23 +36,6 @@ if (!empty($order)) {
 $where = [];
 $whereOr = [];
 
-$where[] = "A.VENDEDOR = $usuario";
-// $where[] = "A.STATUS IN ()";
-
-if($pendente == 'true'){
-    $where[] = "A.STATUS NOT IN (5, 6, 9, 10)";
-}
-
-if($cliente){
-    $where[] = "D.NOME LIKE '%$cliente%'";
-}
-
-if($tipo){
-    $where[] = "F.HANDLE = $tipo";
-}
-
-if($formapagamento){
-    $where[] = "E.HANDLE = $formapagamento";
 }
 
 if($search){
@@ -69,33 +60,9 @@ if(count($where) > 0){
 
 $order = "ORDER BY A." . $columns[$col]["data"] . " " . $dir;
 
-$sqlOrdens = "WITH ORDENS AS
-(
-SELECT ROW_NUMBER() OVER ($order) ROW_NUMBER,
-A.HANDLE,
-A.CHAVE,
-A.NUMERO,
-A.DATA,
-A.STATUS,
-A.STATUS STATUSHANDLE,
-A.VALORTOTAL,
-B.NOME STATUSNOME,
-C.RESOURCENAME,
-D.APELIDO CLIENTE,
-E.NOME FORMAPAGAMENTO,
-F.NOME TIPO
-FROM VE_ORDEM A
-INNER JOIN MS_STATUS B ON A.STATUS = B.HANDLE
-INNER JOIN MD_IMAGEM C ON B.IMAGEM = C.HANDLE
-INNER JOIN MS_PESSOA D ON A.CLIENTE = D.HANDLE
-LEFT JOIN FN_TIPOPAGAMENTO E ON A.FORMAPAGAMENTO = E.HANDLE
-INNER JOIN VE_TIPOORDEM F ON A.TIPO = F.HANDLE
-$whereTexto
-
-
-)   
-SELECT * FROM ORDENS A WHERE row_number BETWEEN $start AND $length
-
+$sqlOrdens = "
+SELECT EMISSAO, FROM OP_PROGRAMACAO
+WHERE CLIENTE IN ('". $pessoas ."')
 ";
 
 $queryOrdens = $connect->prepare($sqlOrdens);
@@ -104,7 +71,7 @@ $queryOrdens->execute();
 $ordens = [];
 
 while($dados = $queryOrdens->fetch(PDO::FETCH_ASSOC)){
-    $dados["STATUS"] = Sistema::getImagem($dados['RESOURCENAME'], $dados['STATUSNOME']);
+    // $dados["STATUS"] = Sistema::getImagem($dados['RESOURCENAME'], $dados['STATUSNOME']);
     $dados["DATA"] = Sistema::formataData($dados["DATA"]);
     $dados["VALORTOTAL"] = Sistema::formataValor($dados["VALORTOTAL"]);
 
