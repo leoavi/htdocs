@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 
 class WebService
 {
     static private $curl;
     static private $header;
     static private $body;
-    static private $url = 'http://LOCALHOST:9999/escalasoft/';
+    static private $url = 'http://localhost:8083/escalasoft/';
 
     static function setupCURL($url = null, $data = null)
     {

@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 
 #Alterar Host e porta para conexão ao WebService
-$host = "186.209.30.45";
+$host = "179.127.167.180";
 $porta = 8080;
 #######
 
