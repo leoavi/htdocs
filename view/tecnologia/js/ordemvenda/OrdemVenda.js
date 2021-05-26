@@ -17,8 +17,6 @@ $(function () {
                     "pesquisa": $("#pesquisarDesktop").val().length > 0 ? $("#pesquisarDesktop").val() : $("#pesquisarMobile").val(),
                     "pendente": $(".Pendente").attr('data-pendente'),
                     "cliente": $("#Cliente").val(),
-                    "tipo": $("#Tipo").val(),
-                    "formapagamento": $("#FormaPagamento").val(),
                 });
             }
         },
@@ -47,20 +45,15 @@ $(function () {
                 "responsivePriority": 2
             },
             {
-                "data": "CLIENTE",
-                "responsivePriority": 3
-            },
+                "data": "QUANTIDADE",
+                "width": '1%',
+                "class": "text-right"
+            },  
             {
-                "data": "TIPO",
-                "responsivePriority": 4
-            },
-            {
-                "data": "FORMAPAGAMENTO",
-            },
-            {
-                "data": "VALORTOTAL",
-                "class": "text-right",
-            },
+                "data": "PEDIDO",
+                "width": '1%',
+                "class": "text-right"
+            },                        
         ]
     });
 
