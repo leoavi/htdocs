@@ -5,7 +5,7 @@ class WebService
     static private $curl;
     static private $header;
     static private $body;
-    static private $url = 'http://localhost:8083/escalasoft/';
+    static private $url = 'http://179.127.167.180:8083';
 
     static function setupCURL($url = null, $data = null)
     {

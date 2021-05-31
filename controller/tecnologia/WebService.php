@@ -2,7 +2,7 @@
 
 #Alterar Host e porta para conexão ao WebService
 $host = "179.127.167.180";
-$porta = 8080;
+$porta = 8083;
 #######
 
 if (isset($_GET['getWS'])) {
